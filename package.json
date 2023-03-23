@@ -3,28 +3,25 @@
   "types": "index.d.ts",
   "exports": {
     ".": {
+      "types": "./index.d.ts",
       "import": "./index.mjs",
-      "require": "./index.cjs",
-      "types": "./index.d.ts"
+      "require": "./index.cjs"
     },
     "./a": {
+      "types": "./a.d.mts",
       "import": "./a.mjs",
-      "require": "./a.cjs",
-      "types": "./a.d.ts"
+      "require": "./a.cjs"
     }
   },
-  "typesVersions": {
-    "*": {
-      "a": [
-        "a.d.ts"
-      ],
-      ".": [
-        "index.d.ts"
-      ]
-    }
+  "dependencies": {
+    "@ali/uxian-sdk": "^1.0.16",
+    "@ice/pkg": "^1.5.4"
   },
   "devDependencies": {
-    "@types/node": "^18.7.8",
-    "typescript": "^4.7.4"
+    "@types/fs-extra": "^9.0.13",
+    "@types/node": "^18.11.18",
+    "rimraf": "^3.0.2",
+    "tsc-alias": "^1.8.2",
+    "typescript": "^4.9.4"
   }
 }
